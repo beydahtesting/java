@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Include common toolbar -->
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Label for Teacher Image -->
+            <TextView
+                android:id="@+id/tv_teacher_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload Teacher Answer Key"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Teacher Image Preview -->
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/teacher_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#CCCCCC"/>
+
+            <!-- Camera and Gallery Buttons -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_teacher_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Take Photo"
+                android:layout_marginTop="16dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_teacher_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose from Gallery"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Rotate & Flip Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_teacher_rotate"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Rotate"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_teacher_flip"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Flip"/>
+            </LinearLayout>
+
+            <!-- Confirm Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_teacher_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirm"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+
+        <!-- ProgressBar overlay for teacher image processing -->
+        <ProgressBar
+            android:id="@+id/progressBarTeacher"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

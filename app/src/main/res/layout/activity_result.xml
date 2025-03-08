@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Include common toolbar -->
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/result_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Result"
+                android:textSize="18sp"
+                android:padding="8dp"/>
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/teacher_result_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#CCCCCC"/>
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/graded_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="16dp"
+                android:background="#CCCCCC"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_view_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Student Record"
+                android:layout_marginTop="16dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_upload_student"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload Student Image"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_upload_teacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload Teacher Image"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
